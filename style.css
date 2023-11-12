@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@100;400&family=Oswald&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: rgb(171,178,209);
+    background: radial-gradient(circle, rgb(188, 189, 190) 0%, rgba(84,84,85,1) 98%);
+    color: rgb(253, 253, 253);
+}
+
+.navbar {
+    color: rgb(233, 233, 233);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgb(134, 133, 133) 0%, rgba(84,84,85,1) 98%);
+}
+.navbar h1 {
+    margin: 0 ;
+    padding-left: 2%;
+    text-transform: uppercase;
+    
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.navbar li {
+    margin: 0 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+li:hover{
+    color: rgb(148, 155, 247);
+}
+
+.header {
+    text-align: start;
+    padding: 50px 20px;
+    
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    padding: 5%;
+}
+
+.header span {
+    color: #007bff;
+}
+p {
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.p_img{
+    display: flex;
+}
+
+#text {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.habilidades {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: rgb(0, 208, 255);
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    background: rgb(185, 203, 241);
+}
+
+.first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+}
+
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+}
+
+#cards {
+    color: rgb(19, 53, 85);
+}
+
+button,
+button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    position: relative;
+    font-size: 2.5rem;
+
+}
+
+button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'habilidades';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+}
+
+button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+    0% {
+        clip-path: var(--move1);
+        transform: translate(0px, -10px);
+    }
+
+    10% {
+        clip-path: var(--move2);
+        transform: translate(-10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--move3);
+        transform: translate(10px, 0px);
+    }
+
+    30% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    40% {
+        clip-path: var(--move5);
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        clip-path: var(--move6);
+        transform: translate(-10px, 10px);
+    }
+
+    60% {
+        clip-path: var(--move1);
+        transform: translate(10px, -10px);
+    }
+
+    70% {
+        clip-path: var(--move3);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--move2);
+        transform: translate(10px, -10px);
+    }
+
+    90% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    100% {
+        clip-path: var(--move1);
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        position:center;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar h2{
+        display: flex;
+        justify-content: center;
+    }
+    .habilidades{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin: 5%;
+    }
+    .p_img{
+        display: flex;
+        flex-direction: column;
+    }
+}
