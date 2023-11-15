@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@100;400&family=Oswald&family=Roboto+Mono:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Anton&family=Bebas+Neue&family=Kanit:wght@100;400&family=Kdam+Thmor+Pro&family=Oswald&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+
+
+
 
 * {
     padding: 0;
@@ -23,10 +28,11 @@ body {
 background: radial-gradient(circle, rgb(134, 133, 133) 0%, rgba(84,84,85,1) 98%);
 }
 .navbar h1 {
-    margin: 0 ;
-    padding-left: 2%;
+    margin: 0;
+    padding-left: 5%;
     text-transform: uppercase;
-    
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
 }
 
 .navbar ul {
@@ -46,64 +52,53 @@ li:hover{
     color: rgb(148, 155, 247);
 }
 
-.header {
-    text-align: start;
-    padding: 50px 20px;
-    
-}
-
-.header h2 {
-    font-size: 2.5rem;
-    color: #333;
-    padding: 5%;
-}
-
-.header span {
-    color: #007bff;
-}
-p {
-    max-width: 800px;
-    line-height: 1.6;
-    font-size: 1.5rem;
-    font-family: 'Kanit', sans-serif;
-}
-
-.p_img{
-    display: flex;
-}
-
-#text {
-    display: flex;
-    justify-content: center;
-
-}
-
-
 .habilidades {
     display: flex;
     justify-content: space-around;
     padding: 30px;
+    
 }
-
-
-
+.text1{
+    padding-top: 10%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.text1 h4{
+    font-size: 2.5rem;
+}
+.text1 h2{
+    font-size: 4.5rem;
+}
+.text1 h5{
+    font-size: 1.5rem;
+}
+.text1 h2 span{
+    color: cyan;
+}
+#hero{
+    display: flex;
+    justify-content: space-between;
+    
+}
 .card {
+    font-family: 'Bebas Neue', sans-serif;
     width: 190px;
     height: 254px;
-    background: rgb(0, 208, 255);
+    background: rgb(255, 255, 255);
     transition: all 0.4s;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.705);
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .card:hover {
     border-radius: 15px;
     cursor: pointer;
     transform: scale(1.2);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-    background: rgb(185, 203, 241);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.705);
+    background: rgb(54, 98, 104);
 }
 
 .first-content {
@@ -143,12 +138,13 @@ p {
 }
 
 #cards {
-    color: rgb(19, 53, 85);
+    color: rgb(0, 0, 0);
 }
 
 button,
 button::after {
-    padding: 10px 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 50px 50px;
     font-size: 20px;
     border: none;
     border-radius: 5px;
@@ -270,8 +266,9 @@ button:hover {
     .card{
         margin: 5%;
     }
-    .p_img{
+    #hero{
         display: flex;
         flex-direction: column;
+        
     }
 }
